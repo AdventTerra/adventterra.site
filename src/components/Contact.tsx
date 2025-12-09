@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Calendar } from "lucide-react";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -176,15 +176,26 @@ export function Contact() {
                       Thindlu Kodigehalli,
                       Vidyaranyapura,
                       <br />
-                      Bangalore, Karnataka - 560097, India
-                      <br />
-                      <span className="text-sm text-[#C9A96E] mt-2 inline-block">
-                        By Appointment Only
-                      </span>
+                      Bangalore, Karnataka - 560097, India
                     </p>
+                                    <div className="flex items-center gap-4">
+
+                  <div>
+                    <a 
+                      href="https://calendly.com/hello-adventterra/get-to-know-the-terra-exchange"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/60 hover:text-[#C9A96E] transition-colors duration-300 flex"
+                    >
+                      By Appointment Only &nbsp; <Calendar className="w-6 h-6 text-[#C9A96E]" strokeWidth={1.5} />
+                    </a>
+                  </div>
+                  
+                </div>
                   </div>
                 </div>
               </div>
+              
 
               {/* Contact Details */}
               <div className="space-y-6">
@@ -211,6 +222,8 @@ export function Contact() {
                     </a>
                   </div>
                 </div>
+
+
               </div>
 
 {/* Global Reach */}
