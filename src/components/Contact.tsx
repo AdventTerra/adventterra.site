@@ -185,9 +185,9 @@ export function Contact() {
                       href="https://calendly.com/hello-adventterra/get-to-know-the-terra-exchange"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white/60 hover:text-[#C9A96E] transition-colors duration-300 flex"
+                      className="text-white/60 hover:text-[#C9A96E] mt-2 transition-colors duration-300 flex"
                     >
-                      By Appointment Only &nbsp; <Calendar className="w-6 h-6 text-[#C9A96E]" strokeWidth={1.5} />
+                      <span className="text-md">By Appointment Only</span> &nbsp; <Calendar className="w-6 h-6 text-[#C9A96E]" strokeWidth={1.5} />
                     </a>
                   </div>
                   
