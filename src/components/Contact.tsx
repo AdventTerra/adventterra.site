@@ -16,6 +16,7 @@ export function Contact() {
   const [sending, setSending] = useState(false);
   const [statusMsg, setStatusMsg] = useState<string>("");
 
+  
   // Your EmailJS IDs (you provided them)
   const SERVICE_ID = "contact_service";
   const TEMPLATE_ID = "contact_form";
