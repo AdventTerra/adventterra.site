@@ -18,7 +18,7 @@ export function Footer() {
           {/* Social */}
           <div className="flex items-center gap-6">
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/advent-terra-realty/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-white/40 hover:text-[#C9A96E] transition-colors duration-300"

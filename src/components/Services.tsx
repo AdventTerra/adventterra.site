@@ -32,7 +32,7 @@ export function Services({ onNavigate }: ServicesProps) {
       icon: Shield,
       title: 'Family Office Alignment',
       description:
-        'We understand the unique needs of family offices—confidentiality, multi-generational thinking, values alignment, and impact considerations. We serve as an extension of your office, operating with the discretion and rigor you demand.',
+        'We understand the unique needs of family offices, confidentiality, multi-generational thinking, values alignment, and impact considerations. We serve as an extension of your office, operating with the discretion and rigor you demand.',
       gradient: 'from-[#C9A96E]/15 to-transparent',
     },
   ];

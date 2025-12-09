@@ -100,27 +100,27 @@ export function Home({ onNavigate }: HomeProps) {
 
   const featuredOpportunities = [
     {
-      title: 'Marina Bay Residences',
+      title: 'Ultra-Luxury Waterfront Residences',
       location: 'Singapore',
-      type: 'Ultra-Luxury Waterfront',
+      //type: 'Ultra-Luxury Waterfront',
       image: 'https://images.unsplash.com/photo-1644025470506-f98ba7b08948?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxTaW5nYXBvcmUlMjBtYXJpbmElMjBhcmNoaXRlY3R1cmV8ZW58MXx8fHwxNzY0NDk3ODQxfDA&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
-      title: 'Burj District Tower',
-      location: 'Dubai, UAE',
-      type: 'Investment Grade',
+      title: 'Investment Grade Portfolio',
+      location: 'UAE',
+      //type: 'Investment Grade',
       image: 'https://images.unsplash.com/photo-1657106251952-2d584ebdf886?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxEdWJhaSUyMHNreWxpbmUlMjBuaWdodHxlbnwxfHx8fDE3NjQ0MTIyOTB8MA&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
-      title: 'Cycladic Collection',
-      location: 'Santorini, Greece',
-      type: 'Legacy Estate',
+      title: 'Legacy Estate Collection',
+      location: 'Greece',
+      //type: 'Legacy Estate',
       image: 'https://images.unsplash.com/photo-1599916382059-2968a101a410?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxTYW50b3JpbmklMjBjbGlmZiUyMHZpbGxhfGVufDF8fHx8MTc2NDQ5Nzg0MHww&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
-      title: 'Mayfair Sky Residence',
-      location: 'London, UK',
-      type: 'Prime Central',
+      title: 'Prime Central Residence',
+      location: 'UK',
+      //type: 'Prime Central',
       image: 'https://images.unsplash.com/photo-1632743441209-8a09b8a37e25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxMb25kb24lMjBsdXh1cnklMjBwZW50aG91c2V8ZW58MXx8fHwxNzY0NDk3ODQwfDA&ixlib=rb-4.1.0&q=80&w=1080',
     },
   ];
@@ -226,12 +226,12 @@ export function Home({ onNavigate }: HomeProps) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl text-center mb-20 text-white/90"
+            className="text-2xl md:text-5xl text-center mb-16 text-white/90"
           >
             Featured Opportunities
           </motion.h3>
 
-          <div className="relative max-w-5xl mx-auto">
+          <div className="relative max-w-4xl mx-auto">
             {/* Cards Container */}
             <div className="overflow-hidden">
               <motion.div
@@ -241,7 +241,7 @@ export function Home({ onNavigate }: HomeProps) {
                 {featuredOpportunities.map((opportunity, index) => (
                   <div
                     key={index}
-                    className="min-w-full px-4"
+                    className="min-w-full px-16"
                   >
                     <div className="relative group cursor-pointer border border-[#C9A96E]/30 overflow-hidden bg-[#1A1A1A]">
                       <div className="aspect-[16/9] relative overflow-hidden">
@@ -254,13 +254,10 @@ export function Home({ onNavigate }: HomeProps) {
                       </div>
                       
                       <div className="absolute bottom-0 left-0 right-0 p-12">
-                        <div className="text-xs tracking-[0.3em] text-[#C9A96E] mb-3 uppercase">
-                          {opportunity.type}
-                        </div>
                         <h4 className="text-3xl md:text-4xl mb-2 text-white">
                           {opportunity.title}
                         </h4>
-                        <p className="text-white/60 tracking-wider">
+                        <p className="text-[#C9A96E] tracking-wider">
                           {opportunity.location}
                         </p>
                       </div>

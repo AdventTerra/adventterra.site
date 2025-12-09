@@ -8,19 +8,19 @@ export function About() {
       icon: Users,
       title: 'People',
       description:
-        'We serve only those who value discretion, depth, and long-term vision. Our clients are not buyers—they are custodians of capital, architects of legacy, and stewards of generational wealth. We partner with UHNW individuals, family offices, and visionary developers who understand that real estate is not a transaction, but a statement of enduring intent.',
+        'We serve only those who value discretion, depth, and long-term vision. Our clients are not buyers, they are custodians of capital, architects of legacy, and stewards of generational wealth. We partner with UHNW & HNW individuals, family offices, and visionary developers who understand that real estate is not a transaction, but a statement of enduring intent.',
     },
     {
       icon: GitBranch,
       title: 'Process',
       description:
-        'Our methodology is relentless in its rigor. We deploy proprietary frameworks combining macroeconomic intelligence, geopolitical risk analysis, urban development trajectories, and micro-market dynamics. Every recommendation is stress-tested across multiple time horizons and ownership scenarios. We do not present options—we present convictions, backed by data, intuition, and decades of collective experience.',
+        'Our methodology is relentless in its rigor. We deploy proprietary frameworks combining macroeconomic intelligence, geopolitical risk analysis, urban development trajectories, and micro-market dynamics. Every recommendation is stress-tested across multiple time horizons and ownership scenarios. We do not present options, we present convictions, backed by data, intuition, and decades of collective experience.',
     },
     {
       icon: Award,
       title: 'Product',
       description:
-        "We curate, not catalog. Our portfolio spans global gateway cities and emerging wealth corridors—from Singapore's waterfront penthouses to Dubai's architectural marvels, from London's historical districts to Santorini's clifftop estates. Each property is vetted for investment pedigree, architectural significance, scarcity, and alignment with our client's strategic objectives. We present only what we ourselves would own.",
+        "We curate, not catalog. Our portfolio spans global lifestyle cities and emerging wealth corridors, from waterfront penthouses to architectural marvels, from historical districts to clifftop estates. Each property is vetted for investment pedigree, architectural significance, scarcity, and alignment with our client's strategic objectives. We present only what we ourselves would own.",
     },
   ];
 
@@ -63,9 +63,9 @@ export function About() {
                 </p>
                 
                 <p>
-                  Based in Bengaluru—India's nerve center of innovation and capital—we operate at the
+                  Based in Bengaluru—India's Startup capital—we operate at the
                   intersection of old-world discretion and new-age intelligence. Our team combines
-                  backgrounds in private banking, institutional real estate, family office advisory, and
+                  backgrounds in institutional real estate, family office advisory, and
                   technology-driven market analysis.
                 </p>
                 
@@ -169,14 +169,13 @@ export function About() {
             className="space-y-8"
           >
             <h3 className="text-3xl md:text-4xl text-white/90">
-              Technology-Enabled, Human-Led
+              AI-Enabled, Human-Led
             </h3>
             
             <p className="text-xl text-white/60 leading-relaxed">
               We leverage proprietary data analytics, AI-driven market intelligence, and real-time
-              global surveillance tools—but every decision passes through the lens of human judgment,
-              ethical responsibility, and strategic foresight. Technology amplifies our capabilities;
-              wisdom guides our choices.
+              global surveillance tools, but every decision passes through the lens of human judgment,
+              ethical responsibility, and strategic foresight. <br/>
             </p>
           </motion.div>
         </div>
@@ -192,7 +191,8 @@ export function About() {
           className="max-w-4xl mx-auto text-center"
         >
           <h2 className="text-4xl md:text-5xl text-[#C9A96E] italic tracking-tight">
-            "Strategic partners and confidants for generations."
+            "Technology amplifies our capabilities;
+              wisdom guides our choices."
           </h2>
         </motion.div>
       </section>
