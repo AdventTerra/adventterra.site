@@ -226,7 +226,7 @@ export function Home({ onNavigate }: HomeProps) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl text-center mb-16 text-white/90"
+            className="text-3xl md:text-4xl text-center mb-12 text-white/90"
           >
             Featured Opportunities
           </motion.h3>
@@ -241,7 +241,7 @@ export function Home({ onNavigate }: HomeProps) {
                 {featuredOpportunities.map((opportunity, index) => (
                   <div
                     key={index}
-                    className="min-w-full px-16"
+                    className="min-w-full px-4 md:px-12"
                   >
                     <div className="relative group cursor-pointer border border-[#C9A96E]/30 overflow-hidden bg-[#1A1A1A]">
                       <div className="aspect-[16/9] relative overflow-hidden">
@@ -253,11 +253,11 @@ export function Home({ onNavigate }: HomeProps) {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                       </div>
                       
-                      <div className="absolute bottom-0 left-0 right-0 p-12">
-                        <h4 className="text-lg md:text-4xl text-white">
+                      <div className="absolute bottom-0 left-0 right-0 py-4 px-4 md:p-12">
+                        <h4 className="text-lg md:text-4xl lg:text-4xl mb-2 text-white">
                           {opportunity.title}
                         </h4>
-                        <p className="text-[#C9A96E] tracking-wider">
+                        <p className="text-base md:text-lg text-[#C9A96E] tracking-wider">
                           {opportunity.location}
                         </p>
                       </div>
@@ -267,17 +267,17 @@ export function Home({ onNavigate }: HomeProps) {
               </motion.div>
             </div>
 
-            {/* Navigation Buttons - Hidden on mobile, positioned better on desktop */}
+            {/* Navigation Buttons */}
             <button
               onClick={prevCard}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-16 px-4 py-4 lg:w-12 lg:h-12 border border-[#C9A96E]/50 hover:bg-[#C9A96E]/10 transition-all duration-300 items-center justify-center group"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-16 w-4 h-12 border border-[#C9A96E]/50 hover:bg-[#C9A96E]/10 transition-all duration-300 flex items-center justify-center group"
               aria-label="Previous"
             >
               <ChevronLeft className="text-[#C9A96E] group-hover:scale-110 transition-transform" />
             </button>
             <button
               onClick={nextCard}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-16 px-4 py-4 lg:w-12 lg:h-12 border border-[#C9A96E]/50 hover:bg-[#C9A96E]/10 transition-all duration-300 items-center justify-center group"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-16 w-4 h-12 border border-[#C9A96E]/50 hover:bg-[#C9A96E]/10 transition-all duration-300 flex items-center justify-center group"
               aria-label="Next"
             >
               <ChevronRight className="text-[#C9A96E] group-hover:scale-110 transition-transform" />
@@ -291,8 +291,8 @@ export function Home({ onNavigate }: HomeProps) {
                   onClick={() => setCurrentCard(index)}
                   className={`h-[1px] transition-all duration-300 ${
                     index === currentCard 
-                      ? 'w-12 sm:w-16 bg-[#C9A96E]' 
-                      : 'w-6 sm:w-8 bg-white/20 hover:bg-white/40'
+                      ? 'w-16 bg-[#C9A96E]' 
+                      : 'w-8 bg-white/20 hover:bg-white/40'
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
