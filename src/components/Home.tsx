@@ -226,7 +226,7 @@ export function Home({ onNavigate }: HomeProps) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-5xl text-center mb-16 text-white/90"
+            className="text-3xl md:text-5xl text-center mb-16 text-white/90"
           >
             Featured Opportunities
           </motion.h3>
@@ -254,7 +254,7 @@ export function Home({ onNavigate }: HomeProps) {
                       </div>
                       
                       <div className="absolute bottom-0 left-0 right-0 p-12">
-                        <h4 className="text-3xl md:text-4xl mb-2 text-white">
+                        <h4 className="text-lg md:text-4xl text-white">
                           {opportunity.title}
                         </h4>
                         <p className="text-[#C9A96E] tracking-wider">
