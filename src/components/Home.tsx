@@ -109,7 +109,7 @@ export function Home({ onNavigate }: HomeProps) {
       title: 'Investment Grade Portfolio',
       location: 'UAE',
       //type: 'Investment Grade',
-      image: 'https://images.unsplash.com/photo-1657106251952-2d584ebdf886?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxEdWJhaSUyMHNreWxpbmUlMjBuaWdodHxlbnwxfHx8fDE3NjQ0MTIyOTB8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1657106251952-2d584ebdf886?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxEdWJhaSUyMHNreUxpbmUlMjBuaWdodHxlbnwxfHx8fDE3NjQ0MTIyOTB8MA&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
       title: 'Legacy Estate Collection',
@@ -134,7 +134,7 @@ export function Home({ onNavigate }: HomeProps) {
   };
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <canvas
@@ -143,12 +143,12 @@ export function Home({ onNavigate }: HomeProps) {
           style={{ opacity: 0.6 }}
         />
         
-        <div className="relative z-10 text-center px-8 max-w-6xl mx-auto">
+        <div className="relative z-10 text-center px-4 sm:px-8 max-w-6xl mx-auto w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: 'easeOut' }}
-            className="mb-8 flex justify-center"
+            className="mb-8 flex justify-center overflow-hidden"
           >
             {/* Import the luxury font */}
             <style>
@@ -267,17 +267,17 @@ export function Home({ onNavigate }: HomeProps) {
               </motion.div>
             </div>
 
-            {/* Navigation Buttons */}
+            {/* Navigation Buttons - Hidden on mobile, positioned better on desktop */}
             <button
               onClick={prevCard}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 w-12 h-12 border border-[#C9A96E]/50 hover:bg-[#C9A96E]/10 transition-all duration-300 flex items-center justify-center group"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-16 px-4 py-4 lg:w-12 lg:h-12 border border-[#C9A96E]/50 hover:bg-[#C9A96E]/10 transition-all duration-300 items-center justify-center group"
               aria-label="Previous"
             >
               <ChevronLeft className="text-[#C9A96E] group-hover:scale-110 transition-transform" />
             </button>
             <button
               onClick={nextCard}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 w-12 h-12 border border-[#C9A96E]/50 hover:bg-[#C9A96E]/10 transition-all duration-300 flex items-center justify-center group"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-16 px-4 py-4 lg:w-12 lg:h-12 border border-[#C9A96E]/50 hover:bg-[#C9A96E]/10 transition-all duration-300 items-center justify-center group"
               aria-label="Next"
             >
               <ChevronRight className="text-[#C9A96E] group-hover:scale-110 transition-transform" />
@@ -291,8 +291,8 @@ export function Home({ onNavigate }: HomeProps) {
                   onClick={() => setCurrentCard(index)}
                   className={`h-[1px] transition-all duration-300 ${
                     index === currentCard 
-                      ? 'w-16 bg-[#C9A96E]' 
-                      : 'w-8 bg-white/20 hover:bg-white/40'
+                      ? 'w-12 sm:w-16 bg-[#C9A96E]' 
+                      : 'w-6 sm:w-8 bg-white/20 hover:bg-white/40'
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -313,7 +313,7 @@ export function Home({ onNavigate }: HomeProps) {
           >
             <button
               onClick={() => onNavigate('Contact')}
-              className="group relative px-16 py-6 border border-[#C9A96E] overflow-hidden transition-all duration-500 hover:border-[#C9A96E]/80"
+                            className="group relative px-16 py-6 border border-[#C9A96E] overflow-hidden transition-all duration-500 hover:border-[#C9A96E]/80"
             >
               <span className="relative z-10 text-[#C9A96E] tracking-[0.2em] uppercase text-sm group-hover:text-white transition-colors duration-500">
                 Begin Your Journey
