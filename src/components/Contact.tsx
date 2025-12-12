@@ -273,7 +273,7 @@ export function Contact() {
 
               {/* Contact Details */}
               <div className="space-y-6">
-                <div className="flex items-center gap-4">
+                {/* <div className="flex items-center gap-4">
                   <Phone className="w-6 h-6 text-[#C9A96E]" strokeWidth={1.5} />
                   <div>
                     <a
@@ -283,7 +283,7 @@ export function Contact() {
                       +91 9886 43 9886
                     </a>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-center gap-4">
                   <Mail className="w-6 h-6 text-[#C9A96E]" strokeWidth={1.5} />
