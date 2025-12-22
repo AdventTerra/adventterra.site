@@ -2,12 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { scrollToSection } from '../utils/scroll';
 
-interface HomeProps {
-  onNavigate: (page: string) => void;
-}
-
-export function Home({ onNavigate }: HomeProps) {
+export function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [currentCard, setCurrentCard] = useState(0);
 
@@ -146,8 +143,9 @@ export function Home({ onNavigate }: HomeProps) {
         <div className="relative z-10 text-center px-4 sm:px-8 max-w-6xl mx-auto w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: 'easeOut' }}
+            viewport={{ once: true }}
             className="mb-8 flex justify-center overflow-hidden"
           >
             {/* Import the luxury font */}
@@ -181,8 +179,9 @@ export function Home({ onNavigate }: HomeProps) {
           
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.3, ease: 'easeOut' }}
+            viewport={{ once: true }}
             className="text-xl md:text-2xl text-white/60 tracking-wide"
           >
             Curating Enduring Legacies in Global Real Estate
@@ -192,8 +191,9 @@ export function Home({ onNavigate }: HomeProps) {
         {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.8, duration: 1 }}
+          viewport={{ once: true }}
           className="absolute bottom-12 left-1/2 -translate-x-1/2"
         >
           <div className="w-[1px] h-16 bg-gradient-to-b from-[#C9A96E] to-transparent" />
@@ -312,8 +312,8 @@ export function Home({ onNavigate }: HomeProps) {
             viewport={{ once: true }}
           >
             <button
-              onClick={() => onNavigate('Contact')}
-                            className="group relative px-16 py-6 border border-[#C9A96E] overflow-hidden transition-all duration-500 hover:border-[#C9A96E]/80"
+              onClick={() => scrollToSection('contact')}
+              className="group relative px-16 py-6 border border-[#C9A96E] overflow-hidden transition-all duration-500 hover:border-[#C9A96E]/80"
             >
               <span className="relative z-10 text-[#C9A96E] tracking-[0.2em] uppercase text-sm group-hover:text-white transition-colors duration-500">
                 Begin Your Journey

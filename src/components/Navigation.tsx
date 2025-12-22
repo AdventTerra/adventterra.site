@@ -3,11 +3,11 @@ import { Logo } from "./Logo";
 import { Menu, X } from "lucide-react";
 
 interface NavigationProps {
-  currentPage: string;
-  onNavigate: (page: string) => void;
+  activeSection: string;
+  onNavigate: (sectionId: string) => void;
 }
 
-export function Navigation({ currentPage, onNavigate }: NavigationProps) {
+export function Navigation({ activeSection, onNavigate }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -20,10 +20,10 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu when page changes
+  // Close mobile menu when section changes
   useEffect(() => {
     setMobileMenuOpen(false);
-  }, [currentPage]);
+  }, [activeSection]);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -37,10 +37,15 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
     };
   }, [mobileMenuOpen]);
 
-  const navItems = ["Home", "About", "Services", "Contact"];
+  const navItems = [
+    { label: "Home", id: "home" },
+    { label: "About", id: "about" },
+    { label: "Services", id: "services" },
+    { label: "Contact", id: "contact" }
+  ];
 
-  const handleNavClick = (page: string) => {
-    onNavigate(page);
+  const handleNavClick = (sectionId: string) => {
+    onNavigate(sectionId);
     setMobileMenuOpen(false);
   };
 
@@ -56,8 +61,8 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <button
-            onClick={() => handleNavClick("Home")}
-            className="flex items-center gap-2 sm:gap-3 group relative z-50"
+            onClick={() => handleNavClick("home")}
+            className="flex items-center gap-2 sm:gap-3 group relative z-50 cursor-pointer"
           >
               <Logo />
             
@@ -76,16 +81,16 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
           <div className="hidden md:flex items-center gap-16 lg:gap-12 xl:gap-12">
             {navItems.map((item) => (
               <button
-                key={item}
-                onClick={() => handleNavClick(item)}
-                className={`relative text-sm tracking-[0.15em] uppercase transition-all duration-300 ${
-                  currentPage === item
+                key={item.id}
+                onClick={() => handleNavClick(item.id)}
+                className={`relative text-sm tracking-[0.15em] uppercase transition-all duration-300 cursor-pointer ${
+                  activeSection === item.id
                     ? "text-[#C9A96E]"
                     : "text-white/60 hover:text-white"
                 }`}
               >
-                {item}
-                {currentPage === item && (
+                {item.label}
+                {activeSection === item.id && (
                   <span className="absolute -bottom-2 left-0 right-0 h-[1px] bg-[#C9A96E]" />
                 )}
               </button>
@@ -124,10 +129,10 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
         <div className="flex flex-col h-full pt-24 px-8">
           {navItems.map((item, index) => (
             <button
-              key={item}
-              onClick={() => handleNavClick(item)}
+              key={item.id}
+              onClick={() => handleNavClick(item.id)}
               className={`relative text-left py-6 border-b border-white/10 text-xl tracking-[0.15em] uppercase transition-all duration-300 ${
-                currentPage === item
+                activeSection === item.id
                   ? "text-[#C9A96E]"
                   : "text-white/60 hover:text-white"
               }`}
@@ -135,8 +140,8 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
                 transitionDelay: mobileMenuOpen ? `${index * 50}ms` : "0ms",
               }}
             >
-              {item}
-              {currentPage === item && (
+              {item.label}
+              {activeSection === item.id && (
                 <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-[#C9A96E]" />
               )}
             </button>

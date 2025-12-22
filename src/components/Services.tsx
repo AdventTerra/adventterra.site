@@ -1,11 +1,8 @@
 import { motion } from 'motion/react';
 import { TrendingUp, Briefcase, Building2, Shield } from 'lucide-react';
+import { scrollToSection } from '../utils/scroll';
 
-interface ServicesProps {
-  onNavigate: (page: string) => void;
-}
-
-export function Services({ onNavigate }: ServicesProps) {
+export function Services() {
   const services = [
     {
       icon: TrendingUp,
@@ -43,8 +40,9 @@ export function Services({ onNavigate }: ServicesProps) {
       <section className="min-h-[70vh] flex items-center justify-center px-8 lg:px-16 xl:px-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
           className="max-w-5xl mx-auto text-center"
         >
           <h1 className="text-6xl md:text-7xl lg:text-8xl mb-12 text-white">
@@ -120,7 +118,7 @@ export function Services({ onNavigate }: ServicesProps) {
             </p>
             
             <button
-              onClick={() => onNavigate('Contact')}
+              onClick={() => scrollToSection('contact')}
               className="group relative px-16 py-6 border border-[#C9A96E] overflow-hidden transition-all duration-500 hover:border-[#C9A96E]/80"
             >
               <span className="relative z-10 text-[#C9A96E] tracking-[0.2em] uppercase text-sm group-hover:text-white transition-colors duration-500">

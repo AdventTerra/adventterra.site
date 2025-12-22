@@ -88,8 +88,9 @@ export function Contact() {
       <section className="min-h-[50vh] flex items-center justify-center px-8 lg:px-16 xl:px-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
           className="max-w-4xl mx-auto text-center"
         >
           <h1 className="text-6xl md:text-7xl lg:text-8xl mb-8 text-white">
