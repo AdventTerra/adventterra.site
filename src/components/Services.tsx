@@ -119,7 +119,7 @@ export function Services() {
             
             <button
               onClick={() => scrollToSection('contact')}
-              className="group relative px-16 py-6 border border-[#C9A96E] overflow-hidden transition-all duration-500 hover:border-[#C9A96E]/80"
+              className="group relative px-16 py-6 border border-[#C9A96E] overflow-hidden transition-all duration-500 hover:border-[#C9A96E]/80 cursor-pointer"
             >
               <span className="relative z-10 text-[#C9A96E] tracking-[0.2em] uppercase text-sm group-hover:text-white transition-colors duration-500">
                 Begin a Conversation

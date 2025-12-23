@@ -270,14 +270,14 @@ export function Home() {
             {/* Navigation Buttons */}
             <button
               onClick={prevCard}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-16 w-4 h-12 border border-[#C9A96E]/50 hover:bg-[#C9A96E]/10 transition-all duration-300 flex items-center justify-center group"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-16 w-4 h-12 border border-[#C9A96E]/50 hover:bg-[#C9A96E]/10 transition-all duration-300 flex items-center justify-center group cursor-pointer"
               aria-label="Previous"
             >
               <ChevronLeft className="text-[#C9A96E] group-hover:scale-110 transition-transform" />
             </button>
             <button
               onClick={nextCard}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-16 w-4 h-12 border border-[#C9A96E]/50 hover:bg-[#C9A96E]/10 transition-all duration-300 flex items-center justify-center group"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-16 w-4 h-12 border border-[#C9A96E]/50 hover:bg-[#C9A96E]/10 transition-all duration-300 flex items-center justify-center group cursor-pointer"
               aria-label="Next"
             >
               <ChevronRight className="text-[#C9A96E] group-hover:scale-110 transition-transform" />
@@ -289,7 +289,7 @@ export function Home() {
                 <button
                   key={index}
                   onClick={() => setCurrentCard(index)}
-                  className={`h-[1px] transition-all duration-300 ${
+                  className={`h-[1px] transition-all duration-300 cursor-pointer ${
                     index === currentCard 
                       ? 'w-16 bg-[#C9A96E]' 
                       : 'w-8 bg-white/20 hover:bg-white/40'
@@ -313,7 +313,7 @@ export function Home() {
           >
             <button
               onClick={() => scrollToSection('contact')}
-              className="group relative px-16 py-6 border border-[#C9A96E] overflow-hidden transition-all duration-500 hover:border-[#C9A96E]/80"
+              className="group relative px-16 py-6 border border-[#C9A96E] overflow-hidden transition-all duration-500 hover:border-[#C9A96E]/80 cursor-pointer"
             >
               <span className="relative z-10 text-[#C9A96E] tracking-[0.2em] uppercase text-sm group-hover:text-white transition-colors duration-500">
                 Begin Your Journey

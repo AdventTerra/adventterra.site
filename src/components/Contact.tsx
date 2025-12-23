@@ -205,7 +205,7 @@ export function Contact() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="group relative px-12 py-4 border border-[#C9A96E] overflow-hidden transition-all duration-500 hover:border-[#C9A96E]/80 w-full md:w-auto"
+                  className="group relative px-12 py-4 border border-[#C9A96E] overflow-hidden transition-all duration-500 hover:border-[#C9A96E]/80 w-full md:w-auto cursor-pointer"
                   disabled={sending}
                 >
                   <span className="relative z-10 text-[#C9A96E] tracking-[0.2em] uppercase text-sm group-hover:text-white transition-colors duration-500">
